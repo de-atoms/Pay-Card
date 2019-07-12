@@ -15,7 +15,7 @@
       [data-cart-info],
       [data-credit-card] {
         transform: scale(0.78);
-    	margin-left: -3.4em;
+      margin-left: -3.4em;
       }
       
       [data-cart-info] h1 span {
@@ -45,7 +45,7 @@
       }
       
       [data-credit-card] {
-        width: 240px;
+        width: 435px;
         min-height: 240px;
         border-radius: 10px;
         background-color: #5d6874;
@@ -87,8 +87,8 @@
       }
       
       [data-pay-btn] {
-        position:fixed;
-        width:90%;
+        position: fixed;
+        width: 90%;
         border: 1px solid;
         bottom:20px;
       }
@@ -117,6 +117,36 @@
     </style>
   </head>
   <body>
+    
+    <div data-cart-info>
+      <h1 class="mdc-typography--headline4">
+        <span class="material-icons">shopping_cart</span>
+        <span data-bill></span>
+      </h1>
+    </div>
+    
+    <div data-credit-card class="mdc-card mdc-card--outlined">
+      <div class="mdc-card__primary-action">
+        
+        <img data-card-type src="http://placehold.it/120x60.png?text=card">
+        
+        <div data-cc-digits>
+          <input type="text" size="4" placeholder="----">
+          <input type="text" size="4" placeholder="----">
+          <input type="text" size="4" placeholder="----">
+          <input type="text" size="4" placeholder="----">
+        </div>
+          
+          <div data-cc-info>
+            <input type="text" size="20" placeholder="Name Surname">
+            <input type="text" size="6" placeholder="MM/YY">
+          </div> 
+      </div>
+      
+    <button class="mdc-button" data-pay-btn>Pay &amp; Checkout Now</button>
+      
+    </div>
+    
     <script>
       const supportedCards = {
         visa, mastercard
@@ -175,31 +205,6 @@
 
       startApp();
     </script>
-    
-    <div data-cart-info>
-      <h1 class="mdc-typography--headline4">
-        <span class="material-icons">shopping_cart</span>
-        <span data-bill><span>
-      </h1>
-    </div>
-    <div data-credit-card clas="mdc-card mdc-card--outlined">
-      <div class="mdc-card__primary-action">
-        <img data-card-type src="http://placehold.it/120x60.png?text=card">
-        <div data-cc-digits>
-          <input size="4" placeholder="----">
-          <input size="4" placeholder="----">
-          <input size="4" placeholder="----">
-          <input size="4" placeholder="----">
-          
-          <div data-cc-info>
-            <input size="20" placeholder="Name Surname">
-            <input size="6" placeholder="MM/YY">
-          </div>
-        </div>
-      </div>
-      
-      <button class="mdc-button" data-pay-btn>Pay & Checkout Now</button>
-    </div>
     
   </body>
 </html>
